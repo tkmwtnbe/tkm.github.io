@@ -1,42 +1,246 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>https://lin.ee/lLkakiq</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>公式LINE 友だち登録</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      background: #f6f7fb;
+      color: #222;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 28px 20px 36px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
       text-align: center;
-      font-family: sans-serif;
-      background-color: #f5f5f5;
     }
-    .box {
-      margin-top: 50px;
-      padding: 20px;
-      background: white;
-      display: inline-block;
-      border-radius: 10px;
+
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 18px;
     }
-    img {
-      width: 200px;
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.5;
+      margin: 0 0 8px;
+      font-weight: 700;
     }
-    .id {
+
+    .sub {
+      margin: 0 0 24px;
+      color: #666;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .btn-line,
+    .btn-copy,
+    .btn-save {
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+
+    .btn-line {
+      background: #06c755;
+      color: #fff;
+    }
+
+    .or {
+      margin: 20px 0;
+      color: #777;
+      font-size: 16px;
+    }
+
+    h2 {
       font-size: 24px;
-      margin-top: 10px;
-      font-weight: bold;
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+
+    .desc {
+      margin: 0 0 16px;
+      color: #666;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .id-box {
+      background: #f7f8fb;
+      border: 1px solid #e6e8ef;
+      border-radius: 14px;
+      padding: 18px 12px;
+      margin-bottom: 12px;
+    }
+
+    .line-id {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: 0.5px;
+      word-break: break-all;
+    }
+
+    .btn-copy {
+      background: #111;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+
+    .steps {
+      text-align: left;
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 28px;
+    }
+
+    .steps p {
+      margin: 8px 0;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .qr-img {
+      width: 250px;
+      max-width: 100%;
+      display: block;
+      margin: 10px auto 16px;
+      border-radius: 12px;
+    }
+
+    .btn-save {
+      background: #eef1f6;
+      color: #111;
+      margin-bottom: 18px;
+    }
+
+    .footer {
+      margin-top: 8px;
+      color: #444;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 520px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .line-id {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="card">
+      <img
+        src="https://raw.githubusercontent.com/tkmwtnbe/tkm.github.io/main/profile.jpeg"
+        alt="プロフィール写真"
+        class="profile-img"
+      />
 
-  <div class="box">
-    <h2>LINE友だち追加</h2>
-    
-    <img src="https://raw.githubusercontent.com/tkmwtnbe/tkm.github.io/main/QR_公式.png">
-    
-    <div class="id">@あなたのID</div>
+      <h1>物販ONE講師の渡邉です！</h1>
+      <p class="sub">皆さんとお話しするのを楽しみにしています</p>
 
-    <p>QRコード or ID検索で追加してください</p>
+      <a
+        href="https://lin.ee/lLkakiq"
+        class="btn-line"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        友だち追加する
+      </a>
+
+      <div class="or">または</div>
+
+      <h2>LINE IDで追加</h2>
+      <p class="desc">LINEアプリの検索からも追加できます</p>
+
+      <div class="id-box">
+        <p class="line-id" id="lineIdText">@773ybyrn</p>
+      </div>
+
+      <button class="btn-copy" onclick="copyLineId()">LINE IDをコピー</button>
+
+      <div class="steps">
+        <p>1. LINEアプリを開く</p>
+        <p>2. ホーム右上の「友だち追加」を押す</p>
+        <p>3. 「検索」を押す</p>
+        <p>4. 「@773ybyrn」を入力して追加する</p>
+      </div>
+
+      <h2>QRコードで追加</h2>
+      <p class="desc">直接読み取るか、保存して追加できます</p>
+
+      <img
+        src="https://raw.githubusercontent.com/tkmwtnbe/tkm.github.io/main/QR_公式.png"
+        alt="LINE QRコード"
+        class="qr-img"
+      />
+
+      <a
+        href="https://raw.githubusercontent.com/tkmwtnbe/tkm.github.io/main/QR_公式.png"
+        download="LINE_QR.png"
+        class="btn-save"
+      >
+        QRコードを保存する
+      </a>
+
+      <div class="steps">
+        <p>1. LINEアプリを開く</p>
+        <p>2. 「友だち追加」→「QRコード」を押す</p>
+        <p>3. このQRコードを読み取る</p>
+        <p>4. 読み取れない場合は保存画像から追加する</p>
+      </div>
+
+      <p class="footer">
+        追加後にひとこと送っていただけると<br />
+        スムーズにご案内できます。
+      </p>
+    </div>
   </div>
 
+  <script>
+    function copyLineId() {
+      const text = document.getElementById("lineIdText").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("LINE IDをコピーしました");
+      });
+    }
+  </script>
 </body>
 </html>
